@@ -207,7 +207,6 @@ class Profile extends StatelessWidget {
                   Icon(Icons.image, color: Colors.white, size: 15),
                 ],
               ),
-              
             ],
           ),
           SizedBox(height: 20),
@@ -222,7 +221,28 @@ class Profile extends StatelessWidget {
             ],
           ),
           Divider(),
-          
+          Expanded(
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 2,
+                mainAxisSpacing: 2,
+              ),
+              itemCount: 12,
+              itemBuilder: (context, index) {
+                return Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(fit: BoxFit.cover,
+                      image: AssetImage("try1.png"),
+                      
+                    ),
+                    
+                  ),
+                );
+                
+              },
+            ),
+          ),
         ],
       ),
     );
