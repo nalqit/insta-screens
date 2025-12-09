@@ -220,7 +220,6 @@ class Profile extends StatelessWidget {
               Icon(Icons.person_pin, color: Colors.white54),
             ],
           ),
-          Divider(),
           Expanded(
             child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -228,16 +227,18 @@ class Profile extends StatelessWidget {
                 crossAxisSpacing: 2,
                 mainAxisSpacing: 2,
               ),
-              itemCount: 12,
+              itemCount: 20,
               itemBuilder: (context, index) {
                 return Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(fit: BoxFit.cover,
-                      image: AssetImage("try1.png"),
+                  color: Colors.white,
+                  child: Image.network(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdUY6-53NESEHhJDAyfXsJigOm9_okUAsgjw&s',
+                    fit: BoxFit.cover,
+                    
                       
                     ),
                     
-                  ),
+                  
                 );
                 
               },
