@@ -221,8 +221,26 @@ class Profile extends StatelessWidget {
               Icon(Icons.person_pin, color: Colors.white54),
             ],
           ),
+          SizedBox(height: 10),
           Divider(),
-          
+          GridView.builder(
+            gridDelegate: 
+            SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              mainAxisSpacing: 2,
+              crossAxisSpacing: 2,
+              ),
+              itemCount: 20,
+           itemBuilder:(context , index){
+              return Container(
+                color: Colors.black,
+                child: Image.network( 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdUY6-53NESEHhJDAyfXsJigOm9_okUAsgjw&s',
+                  
+                  fit: BoxFit.cover,
+                ),
+              );
+           }
+              )
         ],
       ),
     );
